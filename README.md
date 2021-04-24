@@ -6,7 +6,7 @@ Comandos:
 
 - Nuevo branch para la versión de la release
 
-  mvn release:brach -DbranchName=release-x.x.x
+  mvn release:branch -DbranchName=release-x.x.x
 
 - Branch listo para desplegar en pro
 
