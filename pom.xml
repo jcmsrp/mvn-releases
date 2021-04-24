@@ -13,16 +13,16 @@
 	<artifactId>mvn-releases</artifactId>
 	<version>1.0.2-SNAPSHOT</version>
 	<name>mvn-releases</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Maven release plugin with github</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<encoding>UTF-8</encoding>
-		<maven.compiler.target>${encoding}</maven.compiler.target>
-		<maven.compiler.source>${encoding}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
 		<project.resources.sourceEncoding>${encoding}</project.resources.sourceEncoding>
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
-		<archtype.encoding>github</archtype.encoding>
+		<archetype.encoding>${encoding}</archetype.encoding>
 		<project.scm.id>github</project.scm.id>
 	</properties>
 
