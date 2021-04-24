@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.thepowerit.examples</groupId>
 	<artifactId>mvn-releases</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.3-SNAPSHOT</version>
 	<name>mvn-releases</name>
 	<description>Maven release plugin with github</description>
 	<properties>
