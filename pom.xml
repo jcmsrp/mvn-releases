@@ -16,13 +16,22 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<encoding>UTF-8</encoding>
+		<maven.compiler.target>${encoding}</maven.compiler.target>
+		<maven.compiler.source>${encoding}</maven.compiler.source>
+		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+		<project.resources.sourceEncoding>${encoding}</project.resources.sourceEncoding>
+		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
+		<archtype.encoding>github</archtype.encoding>
 		<project.scm.id>github</project.scm.id>
 	</properties>
 
 
 	<scm>
+		<connection>scm:git:https://github.com/jcmsrp/mvn-releases.git</connection>
 		<developerConnection>scm:git:https://github.com/jcmsrp/mvn-releases.git</developerConnection>
-		<tag>HEAD</tag>
+		<url>https://github.com/jcmsrp/mvn-releases</url>
+		<tag>${project.version}</tag>
 	</scm>
 
 	<dependencies>
@@ -63,15 +72,21 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<goals>pre-integration-test</goals>
+					<preparationGoals>package</preparationGoals>
+					<allowTimestampedSnapshots>true</allowTimestampedSnapshots>
+					<tagNameFormat>v@{project.version}</tagNameFormat>
+					<remoteTagging>false</remoteTagging>
+				</configuration> 
+			</plugin>
+			
 		</plugins>
+		
 	</build>
-
-	<distributionManagement>
-		<repository>
-			<id>github</id>
-			<name>GitHub</name>
-			<url>https://maven.pkg.github.com/jcmsrp/mvn-releases</url>
-		</repository>
-	</distributionManagement>
 
 </project>
