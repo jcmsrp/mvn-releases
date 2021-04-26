@@ -80,6 +80,7 @@
 					<allowTimestampedSnapshots>true</allowTimestampedSnapshots>
 					<tagNameFormat>v@{project.version}</tagNameFormat>
 					<remoteTagging>false</remoteTagging>
+					<branchName>release-${project.version}</branchName>
 				</configuration> 
 			</plugin>
 			
