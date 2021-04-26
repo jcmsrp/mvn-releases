@@ -29,7 +29,7 @@
 		<connection>scm:git:https://github.com/jcmsrp/mvn-releases.git</connection>
 		<developerConnection>scm:git:https://github.com/jcmsrp/mvn-releases.git</developerConnection>
 		<url>https://github.com/jcmsrp/mvn-releases</url>
-		<tag>release-1.0.2</tag>
+		<tag>release-1.0.3-SNAPSHOT</tag>
 	</scm>
 
 	<dependencies>
